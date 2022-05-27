@@ -1,0 +1,52 @@
+<!-- 
+The HTML DOM (Document Object Model) is a standard object model and programming interface for HTML. It defines:
+
+The HTML elements as objects
+The properties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another Container
+    </div>
+    <script>
+        let main = document.getElementById('main');
+        console.log(main);
+        let nav = document.getElementById('nav');
+        console.log(nav);
+        let x=confirm("20?");
+        if(x){
+        document.write("hello");
+        }
+        let containers = document.getElementsByClassName('container');
+        console.log(containers);
+
+        let sel1 = document.querySelector('#nav>li');
+        console.log("Selector returns ", sel1)
+
+        let sel = document.querySelectorAll('#nav>li');
+        console.log("Selector returns ", sel)
+        
+        time = new Date();
+        console.log(time);
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="body-img"></div>
+<main id="main">
+  <div id="head">
+  <h1 id="title"><u>Vaccine Certificate Form</u><h1>
+    <p id="description">To collect details of Vaccination status of students </p>
+    </div>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+      </div>
+        <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required="">
+        </div>
+          <div class="form-group">
+      <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+      <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
+    </div>
+      <div class="form-group">
+        <label> What is your vaccination status</label>
+      <select id="dropdown" name="role" class="form-control" required="">
+        <option disabled="" selected="" value="">Select current status</option>
+        <option value="not-vacinated">Not Vaccinated</option>
+        <option value="half">First dose</option>
+        <option value="full">Fully Vaccinated</option>
+      </select>
+    </div>
+      <div class="form-group">
+      <label>Would you join the campus if it is opened?</label>
+      <label>
+        <input name="user-choice" value="definitely" type="radio" class="input-radio" checked="">Definitely</label>
+      <label>
+        <input name="user-choice" value="maybe" type="radio" class="input-radio">Maybe</label>
+
+      <label><input name="user-choice" value="not-sure" type="radio" class="input-radio">Not sure</label>
+    </div>
+      <div class="form-group">
+      <label>
+        What is your Covid vaccine choice?
+        </label>
+      <select id="most-like" name="mostLike" class="form-control" required="">
+        <option disabled="" selected="" value="">Select an option</option>
+        <option value="cx">Covaxin</option>
+        <option value="cs">Covishield</option>
+        <option value="sV">Sputnik V</option>
+        <option value="pf">Pfizer</option>
+      </select>
+    </div>
+      <div class="form-group">
+      <label>
+        What should improve in campus? 
+        <span class="clue">(Check all that apply)</span>
+      </label>
+
+      <label><input name="prefer" value="sanitation" type="checkbox" class="input-checkbox">Sanitation</label>
+      <label>
+        <input name="prefer" value="security" type="checkbox" class="input-checkbox">Security</label>
+      <label><input name="prefer" value="support" type="checkbox" class="input-checkbox">Support System</label>
+      <label><input name="prefer" value="education" type="checkbox" class="input-checkbox">Education System</label>
+
+      <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">City Meetups</label>
+      <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">Forum</label>
+      <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Additional Courses</label>
+    </div>
+      <div class="form-group">
+      <label>Any comments or suggestions?</label>
+      <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+      <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+    </form>
+    </main>
+</body>
+</html>

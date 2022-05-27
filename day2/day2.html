@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+
+    <!-- External CSS  -->
+    <link rel="stylesheet" href="day2.css">
+
+    <!-- Importing font family from internet  -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+    <!-- Internal CSS  -->
+    <style>
+        /* element selector  */
+        p {
+            color: darkslategray;
+            /* background-color: black; */
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover{
+            color: black;
+            background-color:lightslategrey;
+        }
+
+        a:visited{
+            background-color: yellow;
+        }
+         a:active{
+             color:crimson
+         }
+       
+
+        /* Id selector */
+        #id {
+            color: red;
+        }
+
+        #pix {
+            font-size: 33px;
+        }
+
+        #emlh {
+            line-height: 2.5em;
+        }
+
+        #fw {
+            font-weight: bold;
+        }
+
+        #webFont {
+            /* You can use fonts from internet too by importing the font through link tag from google fonts  */
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #h1 {
+            background-color: red;
+            height: 100px;
+            width: 455px;
+
+            /* border-width: 5px;
+            border-color: springgreen;
+            border-style: solid; */
+
+            /* In one line border can be used with first width then style then color  */
+            border: 5px solid springgreen;
+
+            border-radius: 3px;
+        }
+
+        #h2 {
+            background-color: red;
+            height: 100px;
+            width: 455px;
+            border-left: 3px solid teal;
+            border-right: 7px solid blue;
+            border-top: 4px solid black;
+            border-bottom: 5px solid purple;
+        }
+
+        #h3 {
+            background-image: url('https://i.picsum.photos/id/442/536/354.jpg?hmac=HfK5p9OVJ6BC_TnbtKacg3yH5aqCnxH7AxLHcSoeID0');
+            background-size: 500px;
+            width: 500px;
+            height: 200px;
+            color: yellow;
+        }
+
+
+        /* Class Selector  */
+        .class {
+            background-color: darkturquoise;
+        }
+
+        .fonts {
+            background-color: white;
+            color: black;
+            /* font stack : it means if first font is not available for that particular device the website is being viewed on then the next font style to be used and if it is also not there then next and so on*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container{
+            border:2px solid red;
+            background-color: rgb(223, 245, 201);
+            padding: 34px;
+            margin: 34px auto;
+            width:666px;
+        }
+
+        .btn{
+            background-color: cornflowerblue;
+            padding: 6px;
+            border:none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        .btn:hover{
+            color: black;
+            background-color: cornsilk;
+        }
+
+        .btn:visited{
+            background-color: yellow;
+        }
+         .btn:active{
+             color:crimson;
+         }
+
+        .navbar{
+            background-color: black;
+            color:whitesmoke;
+            border-radius: 14px;
+        } 
+
+        .navbar ul{
+            overflow: auto;
+        }
+
+        .navbar li a{
+            padding:4px;
+            color: whitesmoke;
+        }
+
+        .navbar li{
+            float:left;
+            /* display:inline-block; */
+            list-style: none;
+            margin:15px 20px;
+        }
+
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 3px 17px;
+        }
+
+
+        .search{
+            float:right;
+            color:white;
+            padding:12px 75px;
+        }
+
+        /* Grouping Selector */
+        h3,
+        span {
+            text-align: center;
+            background-color: black;
+            color: orchid;
+        }
+    </style>
+    <!-- Inline is given preference over Internal -->
+
+    <!-- The latest CSS is given preference over the formers -->
+
+    <!-- If you want former to be prefered write !important beside it
+            p{
+              color:blanchedalmond !important;
+            } 
+    -->
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#sel"> SELECTORS</a></li>
+                <li><a href="#idt"> DEVLOPER TOOLS</a></li>
+                <li><a href="#fonts"> FONTS</a></li>
+                <li><a href="#brdr">BORDERS</a> </li>
+                <li><a href="#md"> MORE DESIGNING</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search here!">
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>This is CSS tutorial</h2>
+
+    <h3 id="sel">SELECTORS</h3>
+
+    <!-- Inline CSS  -->
+    <!-- <p style="color:bisque; background-color: black;">Code Starts here.</p> -->
+    <p>Code Starts here.</p>
+    <p>This is just a simple paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur reiciendis
+        officia libero sed vero sequi aut commodi nihil nam at, architecto magni nisi. Atque magni vero accusantium
+        tenetur dolorum! Perspiciatis!</p>
+
+    <!-- Id Selector -->
+    <p id="id">Yet another paragraph but it is red in color</p>
+
+    <!-- Class selector  -->
+    <p class="class">Yet another paragraph but with a turquoise background.</p>
+    <span>Hi! This is last part of selectors.</span>
+    <hr>
+
+    <h3 id="idt">Devloper Tools</h3>
+    <p style="background-color:white; color:black ; font-family: 'Times New Roman', Times, serif;">Inspect websites to
+        know more about their code and use of CSS properties to understand what you might be looking for in your
+        website.</p>
+    <hr>
+
+    <h3 id="fonts">FONTS</h3>
+    <p class='fonts'> We are gonna try different fonts to understand how fonts work. </p>
+    <p id="pix" class='fonts'>This demonstates use of pixel units for font-size. Pixel is 1/96 of an inch</p>
+    <p id="emlh" class='fonts'>Line height gives the height of the space above and below the lines of the selected
+        element.<br>
+        Its an easy concept to understand. </p>
+    <p id="fw" class='fonts'>This is bold font-weighted line.</p>
+    <p id="webFont" class='fonts'>You can use fonts from internet too by importing the font through link tag from google
+        fonts.</p>
+    <hr>
+    <h3 id="brdr">HEIGHTS, WIDTH, BACKGROUNDS & BORDERS</h3>
+    <p id="h1">This para will have red background with limited width and extend height</p>
+    <p id="h2">This para will have different side borders.</p>
+    <p id="h3">This para is gonna have a background image.
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quae modi in quo. Ea veniam cum dolore vel
+        rem distinctio ab eos earum at, quia doloremque deserunt impedit magni consequuntur.
+    </p>
+    <hr>
+    <div class="container" id="cont1">
+        <h3 id="md">Pseudo selectors & more designing</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam obcaecati vel incidunt aperiam sapiente. Harum explicabo quia officiis obcaecati sit molestiae nam accusantium earum natus nobis similique maiores, repudiandae excepturi quibusdam! Necessitatibus, minima sit.</p>
+        <a href="http:google.com" class="btn">Read More</a>
+        <button class="btn">Contact us</button>
+    </div>
+    <hr>
+
+    <!-- Linking all html files -->
+    <div style="text-align: center">
+        <a href="day1.html" target="_blank"><button class="btn">DAY1</button></a>
+        <a href="day2a.html" target="_blank"><button class="btn">DAY2A</button></a>
+    </div>
+
+</body>
+
+</html>

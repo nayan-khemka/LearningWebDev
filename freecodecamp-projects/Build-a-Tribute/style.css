@@ -1,0 +1,82 @@
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
+body{
+    background:url("https://www.wallpaperuse.com/wallp/5-58649_m.jpg");
+  /*   font-style:bold; */                                               
+  }
+  h1{
+    font-family: 'Harry Potter', sans-serif; 
+  }
+  #image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+  .pi-item{
+    text-align:center;
+    color:rgb(56,56,56);
+  /*   display:flex-box; */
+  }
+  h4{
+    color:black;
+  /*   width:150px; */
+  /*   text-align:center; */
+  }
+  #flex{
+   width: 20%;
+    border: 1px solid #2d2d2d;
+    display: flex;
+    flex-direction:column;
+  /*   justify-content: center; */
+    margin: auto;
+  }
+  
+  /* .pi-data-value {
+      width: 100%;
+  } */
+  #tribute-link{
+    display:block;
+    width:15%;
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    margin:auto;
+    font-family: 'Harry Potter', sans-serif; 
+    text-align:center;
+  /*   font: */
+  }
+  #tribute-link:hover{
+    color:white;
+  }
+  p{
+    font-size:20px;
+  /*   text-align:center; */
+    width:80%;
+    margin:auto;
+  }
+   @media only screen and (min-width:480px)
+    {
+  
+    }
+  
+    @media only screen and (min-width:767px)
+    {
+  
+    }
+  
+    @media only screen and (min-width:991px)
+    {
+  
+    }
+  
+    @media only screen and (min-width:1200px)
+    {
+   .font {
+      padding: 0px 200px 15px 200px;
+          }
+    }
+  
+    @media(orientation: landscape)
+    {
+  
+    }

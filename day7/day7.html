@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7</title>
+    <style>
+        .container{
+            display:grid;
+            /* grid-template-columns: 200px 200px 200px */
+            /* grid-template-columns: auto auto auto; */
+            /* grid-template-columns: 1fr 4fr 1fr; fr divides the couluns in 1:4:1 ratio and the boxes appear on left side from where the column starts. Remove width to understand better */
+            /* grid-template-columns: repeat(7,auto);
+            grid-gap:50px; */
+            grid-template-rows: 2fr 2fr;
+            grid-template-columns: 2fr 4fr 2fr;
+        }
+        .item{
+            height: 100px;
+            /* width:100px; */
+            margin:3px;
+            background-color: blue;
+            border:2px solid black;
+            /* padding:10px; */
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
+            /* grid-column-gap:20px ;
+            grid-row-gap:40px; */
+            grid-gap:1rem;
+        }
+        .box{
+            /* height:200px; */
+            background-color: bisque;
+            border: 2px solid black;
+            padding:10px;
+        }
+        .box:first-child{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row:1 / span 3;
+        }
+
+        .contain{
+            display:grid;
+            grid-gap:1rem;
+            /* grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center; */
+            grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        }
+        .boxes{
+            background-color:cadetblue;
+            border: 2px solid black;
+            padding:30px;
+            /* margin:10px; */
+        }
+
+        .grids{
+            display:grid;
+            grid-gap:1rem;
+            grid-template-areas:
+            'navbar navbar navbar'
+            'section section aside'
+            'footer footer footer';
+        }
+        .items{
+            background-color:darkmagenta;
+            border: 2px solid black;
+        }
+        #navbar{
+            grid-area: navbar;
+            background-color: darkorange;
+        }
+        #section{
+            grid-area: section;
+            background-color: white;
+        }
+        #aside{
+            grid-area: aside;
+            background-color: wheat;
+        }
+        footer{
+            text-align: center;
+            grid-area:footer;
+            background-color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid Tutorial</h1>
+    <div class="container">
+        
+
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-10</div>
+        <div class="item">This is item-11</div>
+        <div class="item">This is item-12</div>
+        <div class="item">This is item-13</div>
+    </div>
+    <h2>Spanning Multiple rows and columns</h2>
+    <div class="grid">
+        <div class="box">This is box-1</div>
+        <div class="box">This is box-2</div>
+        <div class="box">This is box-3</div>
+        <div class="box">This is box-4</div>
+        <div class="box">This is box-5</div>
+        <div class="box">This is box-6</div>
+        <div class="box">This is box-7</div>
+        <div class="box">This is box-8</div>
+        <div class="box">This is box-9</div>
+        <div class="box">This is box-10</div>
+        <div class="box">This is box-11</div>
+        <div class="box">This is box-12</div>
+        <div class="box">This is box-13</div>
+        <div class="box">This is box-14</div>
+        <div class="box">This is box-15</div>
+    </div>
+    <h2>Autofit and MinMax</h2>
+    <div class="contain">
+        <div class="boxes">This is box-1</div>
+        <div class="boxes">This is box-2</div>
+        <div class="boxes">This is box-3</div>
+        <div class="boxes">This is box-4</div>
+        <div class="boxes">This is box-5</div>
+        <div class="boxes">This is box-6</div>
+        <div class="boxes">This is box-7</div>
+        <div class="boxes">This is box-8</div>
+        <div class="boxes">This is box-9</div>
+        <div class="boxes">This is box-10</div>
+        <div class="boxes">This is box-11</div>
+        <div class="boxes">This is box-12</div>
+        <div class="boxes">This is box-13</div>
+        <div class="boxes">This is box-14</div>
+        <div class="boxes">This is box-15</div>
+    </div>
+    <h2>Template Area</h2>
+    <div class="grids">
+        <div id="navbar" class="items">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A vitae nemo tempora?
+        </div>
+        <div id="section" class="items">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, aliquid cum assumenda placeat consequuntur quod soluta nesciunt quia distinctio tempore quidem id natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. At iste voluptate tempora dignissimos commodi modi ullam blanditiis doloremque dicta! Totam laborum et, aperiam assumenda nesciunt corrupti quis. Quam, ab sunt.
+            Dolores debitis harum doloribus obcaecati, culpa perspiciatis veniam esse eligendi molestias a ad quidem illum consectetur iusto, necessitatibus voluptatem facere enim in quia maiores, quasi accusamus? Voluptatum dignissimos fugit enim!
+            Delectus, nobis cum itaque atque hic, voluptatem labore adipisci deserunt cumque officia cupiditate repellat earum commodi, repellendus illum in quas laudantium quisquam. Suscipit veniam sed exercitationem natus odio officia vel.
+        </div>
+        <div id="aside" class="items">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem aliquam quidem ex, corrupti minima, voluptates doloribus soluta placeat, itaque accusantium labore culpa harum ipsum accusamus recusandae ad veritatis molestiae.
+            Reiciendis recusandae velit saepe reprehenderit excepturi tempora iure deserunt qui officiis magni ut ad assumenda, sunt culpa totam accusamus dolor eos blanditiis nesciunt magnam esse? Rem voluptatem sed voluptate a.
+        </div>
+        <div class="items">This is item-1</div>
+        <div class="items">This is item-2</div>
+        <div class="items">This is item-3</div>
+        <div class="items">This is item-4</div>
+        <div class="items">This is item-5</div>
+        <div class="items">This is item-6</div>
+        <div class="items">This is item-7</div>
+        <div class="items">This is item-8</div>
+        <div class="items">This is item-9</div>
+        <div class="items">This is item-10</div>
+        <div class="items">This is item-11</div>
+        <div class="items">This is item-12</div>
+        <div class="items">This is item-13</div>
+        <div class="items">This is item-14</div>
+        <div class="items">This is item-15</div>
+    </div>
+    <footer>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, fugit?
+    </footer>
+
+    div
+</body>
+</html>

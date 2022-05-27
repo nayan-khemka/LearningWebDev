@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5</title>
+    <style>
+        h1{
+            text-shadow: 2px 2px white;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+        }
+        .card{
+            padding:23px 12px;
+            margin:23px 12px;
+            border:2px solid red;
+            background-color: bisque;
+
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+            box-shadow: 7px 7px  brown;
+            /* box-shadow: -10px -13px 10px 32px; */
+            /* negative value makes the shadow appear on top and the third px value determines how dark or light will the shadow be and fourth onw is how far the shadow should be spread */
+
+            box-shadow: inset 10px 12px red; /*Inside the box shadow*/
+
+            box-shadow: 2px 3px blue,20px 10px green;
+            /* multilayer shadow  */
+
+            
+        }
+        .card h2{
+            text-shadow:2px 2px white;
+        }
+     
+        /* global variable */
+        :root{
+            --primary-color:green;
+            --danger-color:red;
+            --maxw:300px
+        }
+
+
+        .containers{
+            max-width: var(--maxw);
+            margin:auto;
+            display: flex;
+            background-color: var(--primary-color); 
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            --box-color:blue;
+            width:200px;
+            height:200px;
+            background-color:var(--box-color);
+            box-shadow: 3px 3px var(--box-color);
+            border:2px solid black;
+            margin:2px 7px;
+        }
+
+        .contain{
+           display:flex;
+           background-color: yellow;
+
+        }
+        .can{
+           background-color: green;
+           width:250px;
+           height: 250px;
+           position: relative;
+
+           /* animation  */
+           animation-name:proj1 ; 
+           animation-duration: 2s;
+           animation-iteration-count:4 ; /*infinite*/
+
+           animation-fill-mode: alternate;
+           animation-timing-function: ease-out;
+           animation-delay: 1s;
+
+           /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+           animation: proj2 8s 2;
+        }
+
+        /* keyframes */
+        @keyframes proj1 {
+            from{
+                width:200px;
+            }
+            to{
+                width:400px;
+            }
+        }
+
+        @keyframes proj2 {
+            0%{
+                top:0px;
+                left:0px;
+            }
+            35%{
+                top:250px;
+                left:0px;
+            }
+            70%{
+                top:250px;
+                left:250px;
+            }
+            100%{
+                top:0px;
+                left:250px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Box Shadow and Text Shadow </h1>
+    <div class="container">
+        <div class="card" id="car-1">
+            <h2>Card1</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque vero ea sunt explicabo ipsum fuga harum, culpa suscipit repellat provident cum voluptatem minima vitae maxime. Sint debitis officiis mollitia sit.</p>
+        </div>
+        <div class="card" id="car-2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis iste mollitia eveniet error voluptatibus quam. Ex nihil voluptas fugiat, dolore rerum accusamus sit rem expedita, eaque exercitationem, ad veritatis modi?</p>
+        </div>
+        <div class="card" id="car-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis obcaecati ipsum cum, ad accusantium sequi laborum suscipit laboriosam atque dolorum quia, maxime, reiciendis natus incidunt provident voluptate? Similique, commodi consequuntur.</p>
+        </div>
+    </div>
+    <hr>
+    <h1>CSS Variables/Custom Properties</h1>
+    <div class="containers">
+        <div class="box">
+
+        </div>
+        <div class="box">
+
+        </div>
+        <div class="box">
+
+        </div>
+    </div>
+    <hr>
+    <h1>Keyframes and Animations</h1>
+    <div class="contain">
+        <div class="can">
+            This is a can
+        </div>
+    </div>
+    <hr>
+    <h1>CSS Transitions</h1>
+    
+</body>
+</html>

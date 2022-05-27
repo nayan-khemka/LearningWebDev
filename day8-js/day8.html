@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript</title>
+    <!-- <script src="script.js"></script> -->
+    <!-- We can add Java script in body as well as head  -->
+    <!-- But preferrably add it in body cause if you use some thing thats in body it will show error  -->
+    <!-- <script>
+
+    </script> -->
+
+</head>
+<body>
+    <div class="container">
+        <h1>
+            This is Heading
+        </h1>
+        <div class="content">
+            <div id="cont"></div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At nesciunt tempore quasi quisquam eos nemo dicta aliquid impedit voluptatem error sapiente enim placeat quaerat ipsa, mollitia laborum cumque, minus ut.
+                Hic nostrum quisquam sapiente repudiandae, laudantium tenetur, autem deserunt harum facere similique dolore modi! Sequi, neque. Ut corrupti ducimus repellat, sint nulla adipisci iste consequatur eum tenetur itaque possimus! Deleniti.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        var a=78;               //dynamic typing
+        // var b="MyName";
+        var b='MyName';
+        c=33.5;
+        console.log(a);
+        console.log(b);
+        console.log(c); //error 
+         var a =82;
+        //operators in java script
+        // 1. Unary
+        c=-c;
+        console.log(c);
+        // 2. Binary
+        c=c+a;
+        console.log(c);
+        console.log("The value of 5^2 is "+(5**2));
+
+        // pre and post increment and other arithmetic operators works the same 
+
+        //String in Javascript
+        var n='Nayan';
+        var k=19;
+        var t=`${b} is ${n} and i am ${k} years old`;
+        console.log(t);
+        var l= t.length;
+        console.log(l);
+        //\n,\t,\s all other escape sequences also work in javascript
+       var y=new String("NewWayArrayString");
+       console.log(y);
+       
+       document.getElementById('cont').innerHTML = '<h3 style="text-align:center;color:green;background-color:blue">this is an heading</h3>'
+      
+
+       //String Functions
+       //    Line 58 execution has all the diff functions u can use 
+       y="My name is Nayan and this is not an array";
+        var p=y.indexOf('ay');
+        console.log(p);
+        p=y.lastIndexOf('ay');
+        console.log(p);
+        var sub=y.slice(1,5);
+        console.log(sub);
+
+        //slicing is possible just like in python
+
+        //Conditional Statements and their Scope
+        var string1="hi";
+        var string1= "h2";
+        console.log(string1);
+
+        var ab=4;
+        {
+            //let keeps the scope of the variable within a block while var has a global scope
+            let ab=5;
+            console.log(ab);
+        }
+        console.log(ab)
+         age=12
+{
+        var age=20
+        if(age>=18)
+        {
+            console.log("Driving permitted   ");
+            console.log(age);
+        }
+        else{
+            console.log("No");
+        }
+           }  
+           console.log(age);
+           //Nested if-else and switch is present in JS
+
+        // Arrays and Objects
+        //default value of a variable is undefined
+
+        //Primitive datatype declaration:
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        //Object which is reference data type
+        let employee = {
+             name: "Harry",
+             salary: 10,
+             channel: "CodeWithHarry",
+             "channel 2": "ProgrammingWithHarry",
+         }
+         console.log(employee);
+          var xyz;
+          console.log(xyz)
+        //  There is a special kind of object known as Arrays. We can declare an array as follows-
+        let names = [1, 2, 4, "Harry", undefined];
+        console.log(names);
+        //Also possible:
+        let names1 = new Array(23);
+        console.log(names1.length);
+        //Array functions like sort length etc are also available in JS
+
+
+
+        //Functions in JS
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4</title>
+    <style>
+        .container{
+            height: 100%;
+            width:100%;
+            border: 2px solid black;
+            /* initializing container as flex  */
+            display:flex;
+
+
+            /* Flex container properties  */
+            flex-direction: row; /*Default value*/
+            /* flex-direction:row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse; */
+
+            /* if i wanna wrap the items use:  */
+            flex-wrap:wrap;
+             /* Default value no-wrap */ 
+            
+            /* shorthand property for direction and wrap */
+            /* flex-flow:row-reverse wrap; */
+
+            /* spacing in horizontal direction  */
+            /* justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around; */
+
+            /* spacing in vertical direction  */
+            /* align-items: center;
+            align-items: flex-end;
+            align-items: stretch; */
+        }
+        .item{
+            width:400px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin:10px;
+            padding:3px;
+        }
+
+        .box{
+            background-color:red;
+            color: white;
+            font-size: 72px;
+            text-align: center;
+            display: none;
+        }
+        @media(max-width:550px){
+            #box-1{
+                display: block;
+            }
+        }
+        @media(max-width:1000px) and (min-width: 550px){
+            #box-2{
+                display: block;
+                background-color: purple;
+            }
+        }
+        @media(max-width:1499px) and (min-width:1000px)
+        {
+            #box-3{
+                display:block;
+                background-color: grey;
+            }
+        }
+        @media(min-width:1500px)
+        {
+            #box-4{
+                display:block;
+                background-color: blue;
+            }
+        }
+
+        #item-1
+        {
+            /* Flex properties for item-1  */
+            /*order: 2;  higher the order the later the item will appear*/
+
+            flex-grow: 2; 
+              /*negative invalid*/
+            flex-shrink: 1;
+        }
+        #item-2
+        {
+           /* flex-grow:3;
+           flex-shrink:2; */
+           
+           /* when flex-direction is set to row flex basis will control width when it is column then height  */
+           flex-basis:400px;
+        }
+        #item-3
+        {
+            /* flex: 2 2 230px; shorthand */
+
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <div class="container">
+     <div class="item" id="item-1">First Box</div>
+     <div class="item" id="item-2">Second BOx</div>
+     <div class="item" id="item-3">Third Box</div>
+    </div>
+
+    <h1>Responsive design Media Query</h1>
+     <div class="box" id="box-1">I'm an iPhone</div>
+     <div class="box" id="box-2">I'm Tablet</div>
+     <div class="box" id="box-3">I'm Laptop</div>
+     <div class="box" id="box-4">I'm widescreen computer</div>
+
+
+</body>
+</html>
